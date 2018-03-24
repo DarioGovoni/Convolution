@@ -1,0 +1,22 @@
+fixed mid[7][7];
+register int i;
+
+FOR(i,7) {
+	fixed dc[7] = {d(0,i),d(1,i),d(2,i),d(3,i),d(4,i),d(5,i),d(6,i)};
+	mid[0][i] = -12*dc[0]+4*dc[1]+15*dc[2]-5*dc[3]-3*dc[4]+dc[5];
+	mid[1][i] = 12*dc[1]+8*dc[2]-7*dc[3]-2*dc[4]+dc[5];
+	mid[2][i] = -12*dc[1]+16*dc[2]-dc[3]-4*dc[4]+dc[5];
+	mid[3][i] = 6*dc[1]+dc[2]-7*dc[3]-dc[4]+dc[5];
+	mid[4][i] = -6*dc[1]+5*(dc[2]+dc[3]-dc[4])+dc[5];
+	mid[5][i] = 4*dc[1]-5*dc[3]+dc[5];
+	mid[6][i] = -12*dc[1]+4*dc[2]+15*dc[3]-5*dc[4]-3*dc[5]+dc[6];
+}
+FOR(i,7) {
+	v(i,0) = -12*mid[i][0]+4*mid[i][1]+15*mid[i][2]-5*mid[i][3]-3*mid[i][4]+mid[i][5];
+	v(i,1) = 12*mid[i][1]+8*mid[i][2]-7*mid[i][3]-2*mid[i][4]+mid[i][5];
+	v(i,2) = -12*mid[i][1]+16*mid[i][2]-mid[i][3]-4*mid[i][4]+mid[i][5];
+	v(i,3) = 6*mid[i][1]+mid[i][2]-7*mid[i][3]-mid[i][4]+mid[i][5];
+	v(i,4) = -6*mid[i][1]+5*(mid[i][2]+mid[i][3]-mid[i][4])+mid[i][5];
+	v(i,5) = 4*mid[i][1]-5*mid[i][3]+mid[i][5];
+	v(i,5) = -12*mid[i][1]+4*mid[i][2]+15*mid[i][3]-5*mid[i][4]-3*mid[i][5]+mid[i][6];
+}

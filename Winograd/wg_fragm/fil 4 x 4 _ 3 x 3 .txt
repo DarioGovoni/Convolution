@@ -1,0 +1,18 @@
+fixed mid[6][3];
+register int i;
+FOR(i,3) { //i=col
+	mid[0][i] = (g(0,i))/4;
+	mid[1][i] = -(g(0,i)+g(1,i)+g(2,i))/6;
+	mid[2][i] = (g(1,i)-g(0,i)-g(2,i))/6;
+	mid[3][i] = (g(0,i)/2+g(1,i)+g(2,i)*2)/12;
+	mid[4][i] = (g(0,i)/2-g(1,i)+g(2,i)*2)/12;
+	mid[5][i] = g(2,i);
+}
+FOR(i,6) { //i=row
+	u(i,0) = mid[i][0]/4;
+	u(i,1) = -(mid[i][0]+mid[i][1]+mid[i][2])/6;
+	u(i,2) = (mid[i][1]-mid[i][0]-mid[i][2])/6;
+	u(i,3) = (mid[i][0]/2+mid[i][1]+mid[i][2]*2)/12;
+	u(i,4) = (mid[i][0]/2-mid[i][1]+mid[i][2]*2)/12;
+	u(i,5) = mid[i][2];
+}

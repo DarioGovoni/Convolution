@@ -1,0 +1,12 @@
+fixed mid[3][5];
+register int i;
+FOR(i,5) {
+	mid[0][i] = w(0,i)+w(1,i)+w(2,i)+w(3,i);
+	mid[1][i] = w(1,i)-w(2,i)+2*w(3,i);
+	mid[2][i] = w(1,i)+w(2,i)+4*w(3,i)+w(4,i);
+}
+FOR(i,3) {
+	s(i,0) = mid[i][0]+mid[i][1]+mid[i][2]+mid[i][3];
+	s(i,1) = mid[i][1]-mid[i][2]+2*mid[i][3];
+	s(i,2) = mid[i][1]+mid[i][2]+4*mid[i][3]+mid[i][4];
+}

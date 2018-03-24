@@ -1,0 +1,16 @@
+fixed mid[5][7];
+register int i;
+FOR(i,7) {
+	mid[0][i] = w(0,i)+w(1,i)+w(2,i)+w(3,i)+w(4,i)+w(5,i);
+	mid[1][i] = w(1,i)-w(2,i)+2*(w(3,i)-w(4,i))+3*w(5,i);
+	mid[2][i] = w(1,i)+w(2,i)+4*(w(3,i)+w(4,i))+9*w(5,i);
+	mid[3][i] = w(1,i)-w(2,i)+8*(w(3,i)-w(4,i))+27*w(5,i);
+	mid[4][i] = w(1,i)+w(2,i)+16*(w(3,i)+w(4,i))+81*w(5,i)+w(6,i);
+}
+FOR(i,5) {
+	s(i,0) = mid[i][0]+mid[i][1]+mid[i][2]+mid[i][3]+mid[i][4]+mid[i][5];
+	s(i,1) = mid[i][1]-mid[i][2]+2*(mid[i][3]-mid[i][4])+3*mid[i][5];
+	s(i,2) = mid[i][1]+mid[i][2]+4*(mid[i][3]+mid[i][4])+9*mid[i][5];
+	s(i,3) = mid[i][1]-mid[i][2]+8*(mid[i][3]-mid[i][4])+27*mid[i][5];
+	s(i,4) = mid[i][1]+mid[i][2]+16*(mid[i][3]+mid[i][4])+81*mid[i][5]+mid[i][6];
+}
