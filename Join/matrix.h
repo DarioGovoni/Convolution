@@ -17,10 +17,12 @@ typedef struct {
 	real* data;
 } matrix;
 
-
+/*
+ * MACRO per accedere comodamente ai valori della struttura
+ */
+#define IDX(MATRIX_PTR,I,J) MATRIX_PTR->data[(I)*((MATRIX_PTR)->w)+(J)]
 
 /*
- * fondamentale: la struttura contiene un puntatore che va gestito a malloc e free,
  * non tentare mai di cambiare valori della struttura senza passare per una
  * funzione dedicata
  */

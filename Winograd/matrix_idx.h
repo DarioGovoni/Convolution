@@ -1,7 +1,19 @@
+
+/*
+ * restituisce un boolean
+ * se indice è dentro la matrice
+ */
 #define IDX_INSIDE(MATRIX_PTR,I,J) ((I>=0) && (I<((MATRIX_PTR)->h)) && (J>=0) && (J<((MATRIX_PTR)->w)))
 #define IDX_INSIDE_OFF(MATRIX_PTR,OFF_H,OFF_W,I,J) IDX_INSIDE(MATRIX_PTR,OFF_H+I,OFF_W+J)
 
+
 #define IDX(MATRIX_PTR,I,J) MATRIX_PTR->data[(I)*((MATRIX_PTR)->w)+(J)]
+
+/*
+ * SAFE: 0 se indice è esterno, altrimenti restituisce il valore puntato
+ * assume i valori fuori dalla matrice siano tutti zeri
+ * macro utile
+ */
 #define IDX_SAFE(MATRIX_PTR,I,J) (((I<0) || (I>=((MATRIX_PTR)->h)) || (J<0) || (J>=((MATRIX_PTR)->w)))?0:IDX(MATRIX_PTR,I,J))
 #define IDX_OFFSET(MATRIX_PTR,OFF_H,OFF_W,I,J) IDX(MATRIX_PTR,OFF_H+I,OFF_W+J)
 #define IDX_OFFSET_SAFE(MATRIX_PTR,OFF_H,OFF_W,I,J) IDX_SAFE(MATRIX_PTR,OFF_H+I,OFF_W+J)
