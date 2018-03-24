@@ -12,8 +12,8 @@
 
 //l'intera struttura va allocata e gestita con metodi ad hoc
 typedef struct {
-	unsigned int h;
-	unsigned int w;
+	unsigned int h; //height (number of rows)
+	unsigned int w; //width (number of columns)
 	real* data;
 } matrix;
 
