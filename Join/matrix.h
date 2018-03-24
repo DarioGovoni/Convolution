@@ -28,8 +28,6 @@ matrix* allocMatrix(int h, int w);
 
 matrix* allocSquareMatrix(int dim);
 
-void reallocMatrix(matrix *m);
-
 void initMatrix(matrix *m);
 
 void freeMatrix(matrix *m);
