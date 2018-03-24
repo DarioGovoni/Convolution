@@ -8,15 +8,6 @@
 #ifndef REAL_H_
 #define REAL_H_
 
-<<<<<<< HEAD
-/*
- * COMMENTO PROVA
- * BY ALESSIO
- */
-
-typedef float real;
-=======
->>>>>>> branching-test
 typedef double real;
 #define REAL_MULT(R1,R2) ((R1)*(R2))
 
