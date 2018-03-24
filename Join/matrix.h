@@ -17,7 +17,10 @@ typedef struct {
 	real* data;
 } matrix;
 
-
+/*
+ * MACRO per accedere comodamente ai valori della struttura
+ */
+#define IDX(MATRIX_PTR,I,J) MATRIX_PTR->data[(I)*((MATRIX_PTR)->w)+(J)]
 
 /*
  * non tentare mai di cambiare valori della struttura senza passare per una
