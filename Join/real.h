@@ -15,4 +15,6 @@ typedef double real;
  */
 #define REAL_MULT(R1,R2) ((R1)*(R2))
 
+void print_real(real r);
+
 #endif /* REAL_H_ */
