@@ -8,6 +8,11 @@
 #ifndef REAL_H_
 #define REAL_H_
 
+/*
+ * COMMENTO PROVA
+ * BY ALESSIO
+ */
+
 typedef double real;
 #define REAL_MULT(R1,R2) ((R1)*(R2))
 
