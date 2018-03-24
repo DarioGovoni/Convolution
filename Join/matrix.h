@@ -19,4 +19,22 @@ typedef struct {
 
 
 
+/*
+ * fondamentale: la struttura contiene un puntatore che va gestito a malloc e free,
+ * non tentare mai di cambiare valori della struttura senza passare per una
+ * funzione dedicata
+ */
+matrix* allocMatrix(int h, int w);
+
+matrix* allocSquareMatrix(int dim);
+
+void reallocMatrix(matrix *m);
+
+void initMatrix(matrix *m);
+
+void freeMatrix(matrix *m);
+
+void printMatrix(matrix *m);
+
+
 #endif /* MATRIX_H_ */
