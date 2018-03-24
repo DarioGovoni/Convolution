@@ -44,6 +44,8 @@ void printMatrix(matrix *m){
 		for(c=0;c<(m->w);c++){ //columns
 			//printf("%d | ",  );
 			//TODO
+			print_real(IDX(m,r,c));
+			printf(" | ");
 		}
 		printf("]\n");
 	}
