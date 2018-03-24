@@ -21,5 +21,6 @@ typedef int32_t fixed;
 #define FIXED_MUL(x,y) (((x)>>HALF_FRACT_BITS)*((y)>>HALF_FRACT_BITS))
 
 typedef fixed real;
+#define REAL_MULT(R1,R2) FIXED_MUL(R1,R2)
 
 #endif /* REAL_H_ */

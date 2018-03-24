@@ -3,6 +3,7 @@
  *
  *  Created on: 24/mar/2018
  *      Author: Dario
+ *  [conflict test]
  */
 
 #ifndef REAL_H_
