@@ -2,7 +2,7 @@
  * matrix.h
  *
  *  Created on: 24/mar/2018
- *      Author: Dario
+ *      Author: Dario, Alessio
  */
 
 #ifndef MATRIX_H_
