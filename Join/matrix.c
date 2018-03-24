@@ -18,15 +18,31 @@ matrix * allocMatrix(int h, int w){
 	m->data=(real*) malloc( (m->h)*(m->w)*sizeof(real) );
 	return m;
 }
-
 void freeMatrix(matrix *m){
 	//dealloco prima il livello più profondo
 	free(m->data);
 	//poi la struttura intera
 	free(m);
 }
-
-
 matrix* allocSquareMatrix(int dim){
 	return allocMatrix(dim,dim);
+}
+
+void initMatrix(matrix *m){
+	int size = m->w * m->h;
+	memset(m->data,0,size*sizeof(real));
+}
+
+
+void printMatrix(matrix *m){
+	int r,c;
+	for(r=0;r<(m->h);r++){ //rows
+		printf("[ ");
+		for(c=0;c<(m->w);c++){ //columns
+			//printf("%d | ",  );
+			//TODO
+		}
+		printf("]\n");
+	}
+	printf("\n");
 }
