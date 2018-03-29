@@ -1,20 +1,20 @@
 /*
- * real.h
- *
- *  Created on: 24/mar/2018
- *      Author: Dario, Alessio
+ ============================================================================
+ Name        : real.h
+ Author      : Alessio Onori
+ Version     : 1.0
+ Copyright   : Your copyright notice
+ Description : astrazione del tipo di dato elemento delle matrici, i singoli valori
+ ============================================================================
  */
 
 #ifndef REAL_H_
 #define REAL_H_
 
-typedef double real;
 /*
- * utilizziamo REAL_MULT per rendere omogenei i casi
- * con i fixed point
+ * banalmente definito come un float in questo progetto
  */
-#define REAL_MULT(R1,R2) ((R1)*(R2))
+typedef float real;
 
-void print_real(real r);
 
 #endif /* REAL_H_ */
